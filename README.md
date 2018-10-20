@@ -6,16 +6,17 @@ In this part you will extend your stage 1 program to become a full web proxy, a 
 
 Your program will speak a subset of the HTTP/1.1 protocol, which is defined in RFC 2616. You're only responsible for a small subset of HTTP/1.1. Your proxy should satisfy these requirements:
 
-Your program should emit (to standard output) a startup line as well as ONE log line for each request it processes or blocks. (See the next section for examples.)
-GET requests work and images and arbitrary length binary files are transferred correctly.
-Your program should properly handle Full-Requests (RFC 1945 section 4.1) up to 65535 bytes. You may close the connection if a Full-Request is larger than that.
-You must support URLs with a numerical IP address also (e.g. http://128.181.0.31/).
-You are not allowed to use fork() or threads or multiprocesses of any kind.
-You may not allocate more than 30MB of memory or have more than 32 file descriptors.
-Your program should service each request as HTTP would i.e. with a response. No crash / segmentation / hang or the like. If there is a truly non-recoverable error your program should call exit(1).
-A list of ‘blocked’ web sites will be supplied: requests to these sites should not be fulfilled, instead an error page will be returned.
-Your program should be maximum 300 lines (excluding comments.)
-You do not have to worry about POST, non HTTP URL/s or HTTP-headers (RFC section 4.2) for now.
+* Your program should emit (to standard output) a startup line as well as ONE log line for each request it processes or blocks. (See the next section for examples.)
+* GET requests work and images and arbitrary length binary files are transferred correctly.
+* Your program should properly handle Full-Requests (RFC 1945 section 4.1) up to 65535 bytes. You may close the connection if a Full-Request is larger than that.
+* You must support URLs with a numerical IP address also (e.g. http://128.181.0.31/).
+* You are not allowed to use fork() or threads or multiprocesses of any kind.
+* You may not allocate more than 30MB of memory or have more than 32 file descriptors.
+* Your program should service each request as HTTP would i.e. with a response. No crash / segmentation / hang or the like. If there is a truly non-recoverable error your program should call exit(1).
+* A list of ‘blocked’ web sites will be supplied: requests to these sites should not be fulfilled, instead an error page will be returned.
+* Your program should be maximum 300 lines (excluding comments.)
+* You do not have to worry about POST, non HTTP URL/s or HTTP-headers (RFC section 4.2) for now.
+
 Please see Moodle Announcements for the revised Java / C / AFS requirements
 
 ## 2.2 DESIGN
