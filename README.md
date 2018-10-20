@@ -39,10 +39,12 @@ That said -- we STRONGLY ENCOURAGE TO ASK US if you have questions about using a
 
 This will be the same as before:
 
+```
 $ ./stage2 2000                       ## listens on port 2000
 stage 2 program by (group-leader-UCID) listening on port (2000)
 REQUEST: http://qprober.cs.columbia.edu/publications/...  ## URL Requested
 Ctl-C                                 ## how we’ll stop it
+```
 
 Note carefully the startup line (printed once on startup to standard out) which should indicate the group number and the group leader’s email. All requests should be logged with a REQUEST line on standard output.
 
@@ -58,13 +60,20 @@ This project will be worth 20% of your class grade.
 
 We will test your proxy using one or more of the following tests:
 
-Ordinary fetch            Fetch a normal web page.
-Split request               Request in more than one ‘chunk’ (connection)
-Large request/resp      Requests of size 65535 bytes or response of size about 200MB
-Bad Connect               URL to a bad port or bad host (e.g. blahblah.com:2222)
-Malformed request     HTTP request that is syntactically incorrect
-Huge request               Requests larger than 65535 bytes (of up to 1MB)
-Stress test                   We will test your proxy with several high-speed requests
+Ordinary fetch | Fetch a normal web page.
+
+Split request | Request in more than one ‘chunk’ (connection)
+
+Large request/resp | Requests of size 65535 bytes or response of size about 200MB
+
+Bad Connect | URL to a bad port or bad host (e.g. blahblah.com:2222)
+
+Malformed request | HTTP request that is syntactically incorrect
+
+Huge request | Requests larger than 65535 bytes (of up to 1MB)
+
+Stress test | We will test your proxy with several high-speed requests
+
 
 We may use some combination of these tests, including some unspecified tests that are within HTTP protocol. (Think of this as a demo to your ‘startup’ venture capitalist for next round funding. Just as at a startup, you will have to design your own tests to mirror how we will test your code.) Your final grade will depend on your design and the performance of your code. Roughly speaking, proxies that pass our tests and remain standing will earn full marks, each failed test gets a 5-10% deduction, proxies that don’t even do Ordinary Fetch will get zero.
 
